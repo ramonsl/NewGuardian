@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NewGuardian</string>
+    <string name="title_food">Food</string>
+    <string name="title_technology">Tech</string>
+    <string name="title_money">Money</string>
+    <string name="no_newses">Sem Noticias</string>
+    <string name="no_internet_connection">Sem Internet</string>
+</resources>

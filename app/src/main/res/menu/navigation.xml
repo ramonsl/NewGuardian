@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_food"
+        android:icon="@drawable/baseline_fastfood_24"
+        android:title="@string/title_food"
+        android:iconTint="@color/colorAccent"
+        />
+
+    <item
+        android:id="@+id/navigation_money"
+        android:icon="@drawable/baseline_attach_money_24"
+        android:title="@string/title_money"
+        android:iconTint="@color/colorAccent"
+
+        />
+
+    <item
+        android:id="@+id/navigation_technology"
+        android:icon="@drawable/baseline_computer_24"
+        android:title="@string/title_technology"
+        android:iconTint="@color/colorAccent"
+        />
+
+</menu>
