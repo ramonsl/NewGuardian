@@ -30,15 +30,12 @@ public class MainActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.navigation_food:
                     mTextMessage.setText(R.string.title_food);
-
                     return true;
                 case R.id.navigation_money:
                     mTextMessage.setText(R.string.title_money);
-
                     return true;
                 case R.id.navigation_technology:
                     mTextMessage.setText(R.string.title_technology);
-
                     return true;
             }
             return false;
@@ -50,13 +47,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mTextMessage =  findViewById(R.id.message);
-
         navigation =  findViewById(R.id.navigation);
-
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
         fragmentManager = getSupportFragmentManager();
-
         navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
