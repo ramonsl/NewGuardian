@@ -2,15 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/primaryLightColor"
     android:maxHeight="200dp"
     android:orientation="horizontal"
     android:paddingBottom="8dp"
     android:paddingEnd="8dp"
     android:paddingLeft="8dp"
     android:paddingRight="8dp"
-    android:paddingStart="8dp"
-    android:background="@color/primaryLightColor"
-    >
+    android:paddingStart="8dp">
 
     <ImageView
         android:id="@+id/imvThumb"
@@ -33,9 +32,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-
-            >
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/txtTitle"
@@ -45,10 +42,7 @@
                 android:textColor="@color/primaryTextColor"
                 android:textSize="20sp"
                 tools:text="EU gives Poland two months to scrap changes to its highest court" />
-
-
         </LinearLayout>
-
 
         <TextView
             android:id="@+id/txtSection"
@@ -59,6 +53,7 @@
             android:textColor="@color/primaryTextColor"
             android:textSize="16dp"
             tools:text="John Doe" />
+
         <TextView
             android:id="@+id/txtDate"
             android:layout_width="fill_parent"
