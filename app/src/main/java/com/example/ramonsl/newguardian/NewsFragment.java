@@ -16,7 +16,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -32,7 +31,6 @@ public class NewsFragment extends Fragment implements LoaderManager.LoaderCallba
     ListView listView;
     private NewsAdapter mAdapter;
     private View circleProgressBar;
-
 
 
     public NewsFragment() {

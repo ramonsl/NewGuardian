@@ -3,7 +3,6 @@ package com.example.ramonsl.newguardian;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -14,11 +13,9 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView mTextMessage;
-    public static String mUrl="http://content.guardianapis.com/search?q=money&order-by=newest&order-date=published&show-fields=headline,thumbnail&show-references=author&show-tags=contributor&page=1&page-size=20&api-key=2d96f27b-6c25-40e7-ac6f-236b586abf0b";
-
-
+    public static String mUrl = "http://content.guardianapis.com/search?q=money&order-by=newest&order-date=published&show-fields=headline,thumbnail&show-references=author&show-tags=contributor&page=1&page-size=20&api-key=2d96f27b-6c25-40e7-ac6f-236b586abf0b";
     BottomNavigationView navigation;
+    private TextView mTextMessage;
     private FragmentManager fragmentManager;
     private Fragment fragment;
 
@@ -46,29 +43,29 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mTextMessage =  findViewById(R.id.message);
-        navigation =  findViewById(R.id.navigation);
+        mTextMessage = findViewById(R.id.message);
+        navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         fragmentManager = getSupportFragmentManager();
         navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
-                switch (id){
+                switch (id) {
                     case R.id.navigation_food:
-                        mUrl="http://content.guardianapis.com/search?q=foodtruck&order-by=newest&show-fields=headline,thumbnail&show-references=author&api-key=2d96f27b-6c25-40e7-ac6f-236b586abf0b";
+                        mUrl = "http://content.guardianapis.com/search?q=foodtruck&order-by=newest&show-fields=headline,thumbnail&show-references=author&api-key=2d96f27b-6c25-40e7-ac6f-236b586abf0b";
                         fragment = new NewsFragment();
                         break;
                     case R.id.navigation_money:
-                        mUrl="http://content.guardianapis.com/search?q=economy&order-by=newest&show-fields=headline,thumbnail&show-references=author&api-key=2d96f27b-6c25-40e7-ac6f-236b586abf0b";
+                        mUrl = "http://content.guardianapis.com/search?q=economy&order-by=newest&show-fields=headline,thumbnail&show-references=author&api-key=2d96f27b-6c25-40e7-ac6f-236b586abf0b";
                         fragment = new NewsFragment();
                         break;
                     case R.id.navigation_technology:
-                        mUrl="http://content.guardianapis.com/search?q=tech&order-by=newest&show-fields=headline,thumbnail&show-references=author&api-key=2d96f27b-6c25-40e7-ac6f-236b586abf0b";
+                        mUrl = "http://content.guardianapis.com/search?q=tech&order-by=newest&show-fields=headline,thumbnail&show-references=author&api-key=2d96f27b-6c25-40e7-ac6f-236b586abf0b";
                         fragment = new NewsFragment();
                         break;
                     default:
-                        mUrl="http://content.guardianapis.com/search?q=tech&order-by=newest&show-fields=headline,thumbnail&show-references=author&api-key=2d96f27b-6c25-40e7-ac6f-236b586abf0b";
+                        mUrl = "http://content.guardianapis.com/search?q=tech&order-by=newest&show-fields=headline,thumbnail&show-references=author&api-key=2d96f27b-6c25-40e7-ac6f-236b586abf0b";
                         fragment = new NewsFragment();
                         break;
                 }

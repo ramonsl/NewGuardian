@@ -13,7 +13,7 @@
     >
 
     <ImageView
-        android:id="@+id/thumbnail_image"
+        android:id="@+id/imvThumb"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -38,7 +38,7 @@
             >
 
             <TextView
-                android:id="@+id/news_title"
+                android:id="@+id/txtTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLines="2"
@@ -51,7 +51,7 @@
 
 
         <TextView
-            android:id="@+id/author_news"
+            android:id="@+id/txtSection"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
@@ -60,7 +60,7 @@
             android:textSize="16dp"
             tools:text="John Doe" />
         <TextView
-            android:id="@+id/publicationDate"
+            android:id="@+id/txtDate"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"

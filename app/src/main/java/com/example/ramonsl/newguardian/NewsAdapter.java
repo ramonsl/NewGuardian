@@ -32,13 +32,13 @@ public class NewsAdapter extends ArrayAdapter<News> {
 
         final News currentNews = getItem(position);
 
-        TextView txtTitle = listItemView.findViewById(R.id.news_title);
-        TextView txtAutor = listItemView.findViewById(R.id.author_news);
-        ImageView ImvThumb = listItemView.findViewById(R.id.thumbnail_image);
-        TextView txtDate = listItemView.findViewById(R.id.publicationDate);
+        TextView txtTitle = listItemView.findViewById(R.id.txtTitle);
+        TextView txtSection = listItemView.findViewById(R.id.txtSection);
+        ImageView ImvThumb = listItemView.findViewById(R.id.imvThumb);
+        TextView txtDate = listItemView.findViewById(R.id.txtDate);
         assert currentNews != null;
         txtTitle.setText(currentNews.getmTitle());
-        txtAutor.setText(currentNews.getmAuthor());
+        txtSection.setText(currentNews.getmSection());
 
         Picasso.get()
                 .load(currentNews.getmThumbUrl())
